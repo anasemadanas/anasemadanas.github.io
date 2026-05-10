@@ -1,0 +1,10 @@
+title: Anas Portfolio
+description: Software Developer Portfolio
+remote_theme: mmistakes/minimal-mistakes
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+github_username: anasemadanas1
+url: "https://anasemadanas.github.io"
+baseurl: ""
