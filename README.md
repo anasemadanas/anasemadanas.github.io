@@ -91,7 +91,7 @@ This project was created for:
 ## 📬 Contact
 
 * Email: [anasemadanas1@gmail.com](mailto:anasemadanas1@gmail.com)
-* GitHub: https://github.com/anasemadanas1
+* GitHub: https://github.com/anasemadanas
 * LinkedIn: [linkedin](https://www.linkedin.com/in/eng-anasemad)
 
 ---
