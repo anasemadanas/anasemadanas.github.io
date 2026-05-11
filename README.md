@@ -1,4 +1,4 @@
-# Anas Emad Al-Shawiki — Portfolio Website
+# Anas Emad Al-Shawiki — Website
 
 This is my personal portfolio website built using **HTML, CSS, and JavaScript**, and hosted on **GitHub Pages**.
 
