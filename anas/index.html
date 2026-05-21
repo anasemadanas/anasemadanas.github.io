@@ -2,542 +2,261 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anas Emad | Backend Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anas Emad | Portfolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
+  <script defer src="script.js"></script>
 
-    body {
-      font-family: "Inter", sans-serif;
-      background: #020617;
-      color: #e5e7eb;
-      line-height: 1.7;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1100px, 92%);
-      margin: auto;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(2, 6, 23, 0.85);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.18);
-    }
-
-    .nav-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 0;
-    }
-
-    .logo {
-      font-weight: 800;
-      color: #38bdf8;
-      letter-spacing: 0.5px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      font-size: 14px;
-      color: #cbd5e1;
-    }
-
-    .nav-links a:hover {
-      color: #38bdf8;
-    }
-
-    header {
-      min-height: 88vh;
-      display: flex;
-      align-items: center;
-      background:
-        radial-gradient(circle at top left, rgba(56, 189, 248, 0.25), transparent 35%),
-        radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.18), transparent 35%);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 40px;
-      align-items: center;
-      padding: 80px 0;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 8px 14px;
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      border-radius: 999px;
-      color: #7dd3fc;
-      background: rgba(56, 189, 248, 0.08);
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: clamp(38px, 6vw, 68px);
-      line-height: 1.05;
-      margin-bottom: 18px;
-    }
-
-    .gradient {
-      background: linear-gradient(90deg, #38bdf8, #22c55e);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero p {
-      color: #cbd5e1;
-      font-size: 18px;
-      max-width: 680px;
-      margin-bottom: 24px;
-    }
-
-    #typed {
-      color: #38bdf8;
-      font-weight: 700;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .btn {
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-weight: 700;
-      transition: 0.25s;
-    }
-
-    .btn-primary {
-      background: #38bdf8;
-      color: #020617;
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      color: #e5e7eb;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-    }
-
-    .hero-card {
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(148, 163, 184, 0.18);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-    }
-
-    .hero-card h3 {
-      color: #38bdf8;
-      margin-bottom: 14px;
-    }
-
-    .hero-card ul {
-      list-style: none;
-    }
-
-    .hero-card li {
-      margin: 10px 0;
-      color: #cbd5e1;
-    }
-
-    section {
-      padding: 80px 0;
-      border-top: 1px solid rgba(148, 163, 184, 0.12);
-    }
-
-    .section-title {
-      font-size: 32px;
-      margin-bottom: 14px;
-    }
-
-    .section-subtitle {
-      color: #94a3b8;
-      margin-bottom: 32px;
-      max-width: 720px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      background: #0f172a;
-      border: 1px solid rgba(148, 163, 184, 0.16);
-      border-radius: 20px;
-      padding: 22px;
-      transition: 0.25s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(56, 189, 248, 0.55);
-    }
-
-    .card h3 {
-      color: #f8fafc;
-      margin-bottom: 10px;
-    }
-
-    .card p,
-    .card li {
-      color: #cbd5e1;
-    }
-
-    .card ul {
-      padding-left: 18px;
-      margin: 12px 0;
-    }
-
-    .project-link {
-      display: inline-block;
-      margin-top: 12px;
-      color: #38bdf8;
-      font-weight: 700;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .skills span {
-      background: #1e293b;
-      border: 1px solid rgba(148, 163, 184, 0.18);
-      padding: 9px 13px;
-      border-radius: 999px;
-      color: #dbeafe;
-      font-size: 14px;
-    }
-
-    .certs a,
-    .contact a {
-      display: inline-block;
-      margin: 6px;
-    }
-
-    .certs img,
-    .contact img {
-      max-width: 100%;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      color: #94a3b8;
-      background: #0f172a;
-      border-top: 1px solid rgba(148, 163, 184, 0.12);
-    }
-
-    @media (max-width: 850px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-content {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-    }
-  </style>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body>
 
   <nav>
+
     <div class="container nav-content">
-      <div class="logo">Anas Emad</div>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
+
+      <div class="logo">
+        Anas Emad
       </div>
+
+      <div class="nav-links">
+
+        <a href="pages/about.html">
+          About
+        </a>
+
+        <a href="pages/projects.html">
+          Projects
+        </a>
+
+        <a href="pages/certifications.html">
+          Certifications
+        </a>
+
+        <a href="pages/contact.html">
+          Contact
+        </a>
+
+      </div>
+
     </div>
+
   </nav>
 
   <header>
+
     <div class="container hero">
-      <div>
-        <span class="badge">Backend Developer • Cybersecurity Learner</span>
+
+      <!-- LEFT SIDE -->
+
+      <div class="hero-left">
+
+        <span class="badge">
+          Backend Developer • Cybersecurity Learner
+        </span>
 
         <h1>
-          Hi, I'm <span class="gradient">Anas Emad</span>
+          Hi, I'm
+          <span class="gradient">
+            Anas Emad
+          </span>
         </h1>
 
         <p>
-          I build backend systems, REST APIs, database-driven applications, and real-world software projects.
-          Currently focused on Java, Spring Boot, Django, system design, and cybersecurity fundamentals.
+          Backend developer focused on Java, Spring Boot,
+          Django, REST APIs, databases,
+          scalable backend systems,
+          and secure application development.
         </p>
 
-        <p><span id="typed"></span></p>
+        <p class="typing">
+          <span id="typed"></span>
+        </p>
 
         <div class="buttons">
-          <a class="btn btn-primary" href="#projects">View Projects</a>
-          <a class="btn btn-secondary" href="mailto:anasemadanas1@gmail.com">Contact Me</a>
-          <a class="btn btn-secondary" href="https://github.com/anasemadanas" target="_blank">GitHub</a>
+
+          <a href="pages/projects.html"
+             class="btn primary">
+
+            View Projects
+
+          </a>
+
+          <a href="mailto:anasemadanas1@gmail.com"
+             class="btn secondary">
+
+            Contact Me
+
+          </a>
+
         </div>
+
       </div>
 
-      <div class="hero-card">
-        <h3>Quick Info</h3>
-        <ul>
-          <li>💻 Backend: Java, Spring Boot, Django</li>
-          <li>🗄️ Databases: SQL, PostgreSQL, MySQL</li>
-          <li>🔐 Interest: Cybersecurity & Malware Analysis</li>
-          <li>🧠 Problem Solving: 1000+ challenges</li>
-          <li>☁️ Learning: Cloud, DevOps, System Design</li>
-        </ul>
+      <!-- RIGHT SIDE -->
+
+      <div class="hero-right">
+
+        <div class="card">
+
+          <h3>
+            🚀 Quick Info
+          </h3>
+
+          <ul>
+
+            <li>
+              💻 Java & Spring Boot
+            </li>
+
+            <li>
+              🗄️ SQL & PostgreSQL
+            </li>
+
+            <li>
+              🔐 Cybersecurity Learner
+            </li>
+
+            <li>
+              🧠 1000+ Problems Solved
+            </li>
+
+            <li>
+              ☁️ Cloud & DevOps
+            </li>
+
+          </ul>
+
+        </div>
+
       </div>
+
     </div>
+
   </header>
 
-  <section id="about">
+  <!-- ========================= -->
+  <!-- ABOUT SECTION -->
+  <!-- ========================= -->
+
+  <section>
+
     <div class="container">
-      <h2 class="section-title">👤 About Me</h2>
-      <p class="section-subtitle">
-        Software developer passionate about clean architecture, secure applications, backend engineering,
-        and building useful real-world systems.
+
+      <h2>
+        👤 About Me
+      </h2>
+
+      <p>
+        Passionate backend developer building secure,
+        scalable, and real-world systems using Java,
+        Spring Boot, Django, SQL databases,
+        REST APIs, and clean architecture principles.
       </p>
 
-      <div class="grid">
-        <div class="card">
-          <h3>Backend Focus</h3>
-          <p>Building APIs, dashboards, authentication systems, and database-backed applications.</p>
-        </div>
-
-        <div class="card">
-          <h3>Cybersecurity Interest</h3>
-          <p>Learning malware analysis, network security, Linux, Wireshark, and secure system design.</p>
-        </div>
-
-        <div class="card">
-          <h3>Engineering Mindset</h3>
-          <p>Focused on clean code, SOLID principles, scalability, and practical software design.</p>
-        </div>
-      </div>
     </div>
+
   </section>
 
-  <section id="projects">
+  <!-- ========================= -->
+  <!-- QUICK SKILLS -->
+  <!-- ========================= -->
+
+  <section>
+
     <div class="container">
-      <h2 class="section-title">🚀 Featured Projects</h2>
-      <p class="section-subtitle">Some of my practical projects and applications.</p>
 
-      <div class="grid">
-        <div class="card">
-          <h3>💰 Expense Manager</h3>
-          <p>Django web application for managing personal expenses with CRUD operations.</p>
-          <ul>
-            <li>Django</li>
-            <li>Database integration</li>
-            <li>Expense tracking</li>
-          </ul>
-          <a class="project-link" href="https://anasemad.pythonanywhere.com/" target="_blank">Live Demo →</a>
-          <br>
-          <a class="project-link" href="https://github.com/anasemadanas/Expense_Track" target="_blank">GitHub Repo →</a>
-        </div>
-
-        <div class="card">
-          <h3>🎮 Connect 4 Game</h3>
-          <p>Java-based game implementing full game logic and object-oriented programming.</p>
-          <ul>
-            <li>Java</li>
-            <li>OOP</li>
-            <li>Game logic</li>
-          </ul>
-          <a class="project-link" href="https://github.com/anasemadanas/connect-4" target="_blank">GitHub Repo →</a>
-        </div>
-
-        <div class="card">
-          <h3>🔐 Security Learning Lab</h3>
-          <p>Personal cybersecurity learning path focused on safe malware analysis and network tools.</p>
-          <ul>
-            <li>Wireshark</li>
-            <li>Linux</li>
-            <li>VMware</li>
-          </ul>
-          <a class="project-link" href="https://github.com/anasemadanas" target="_blank">More Projects →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="container">
-      <h2 class="section-title">🛠 Skills</h2>
-      <p class="section-subtitle">Technologies and tools I use or currently learn.</p>
+      <h2>
+        ⚙️ Core Technologies
+      </h2>
 
       <div class="skills">
+
         <span>Java</span>
         <span>Spring Boot</span>
-        <span>C#</span>
-        <span>.NET</span>
-        <span>Python</span>
         <span>Django</span>
-        <span>JavaScript</span>
         <span>REST APIs</span>
         <span>SQL</span>
         <span>PostgreSQL</span>
         <span>MySQL</span>
         <span>Git</span>
-        <span>GitHub</span>
         <span>Docker</span>
         <span>Linux</span>
-        <span>VMware</span>
-        <span>Postman</span>
-        <span>System Design</span>
-        <span>SOLID</span>
         <span>Cybersecurity</span>
+        <span>System Design</span>
+
       </div>
+
     </div>
+
   </section>
+
+  <!-- ========================= -->
+  <!-- FEATURED LINKS -->
+  <!-- ========================= -->
 
   <section>
+
     <div class="container">
-      <h2 class="section-title">🌱 Currently Learning</h2>
 
-      <div class="grid">
-        <div class="card">
-          <h3>Backend Engineering</h3>
-          <p>Spring Boot, REST APIs, authentication, clean architecture, and scalable backend systems.</p>
-        </div>
+      <h2>
+        🔗 Featured Links
+      </h2>
 
-        <div class="card">
-          <h3>Cloud & DevOps</h3>
-          <p>Docker, Linux, deployment, Azure fundamentals, and cloud-based application hosting.</p>
-        </div>
+      <div class="buttons">
 
-        <div class="card">
-          <h3>Cybersecurity</h3>
-          <p>Network security, Wireshark analysis, malware analysis basics, and safe lab environments.</p>
-        </div>
+        <a href="https://github.com/anasemadanas"
+           target="_blank"
+           class="btn secondary">
+
+          GitHub
+
+        </a>
+
+        <a href="https://www.linkedin.com/in/eng-anasemad"
+           target="_blank"
+           class="btn secondary">
+
+          LinkedIn
+
+        </a>
+
+        <a href="https://anasemadanas.github.io/"
+           target="_blank"
+           class="btn secondary">
+
+          Portfolio
+
+        </a>
+
+        <a href="https://www.credly.com/users/anas-emad-sabri-al-shawiki"
+           target="_blank"
+           class="btn secondary">
+
+          Credly
+
+        </a>
+
       </div>
+
     </div>
+
   </section>
 
-  <section id="certifications">
-    <div class="container">
-      <h2 class="section-title">🎓 Certifications</h2>
-      <p class="section-subtitle">Certificates, badges, and learning profiles.</p>
-
-      <div class="certs">
-        <a href="https://cs50.harvard.edu/certificates/46da5d62-c049-47a6-a77a-f4e31ec9da9b" target="_blank">
-          <img src="https://img.shields.io/badge/CS50-Harvard%20University-8B1E3F?style=for-the-badge" alt="CS50">
-        </a>
-
-        <a href="https://www.credly.com/users/anas-emad-sabri-al-shawiki" target="_blank">
-          <img src="https://img.shields.io/badge/Credly-Badges-FF6B00?style=for-the-badge&logo=credly&logoColor=white" alt="Credly">
-        </a>
-
-        <a href="https://orcid.org/0009-0000-7569-8202" target="_blank">
-          <img src="https://img.shields.io/badge/ORCID-Research-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID">
-        </a>
-
-        <img src="https://img.shields.io/badge/AI--900-Azure%20AI%20Fundamentals-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="AI-900">
-        <img src="https://img.shields.io/badge/CompTIA%20Security+-Cybersecurity-darkgreen?style=for-the-badge&logo=comptia&logoColor=white" alt="Security+">
-        <img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner-orange?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS">
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">📬 Contact</h2>
-      <p class="section-subtitle">You can reach me through these platforms.</p>
-
-      <div class="contact">
-        <a href="mailto:anasemadanas1@gmail.com">
-          <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
-        </a>
-
-        <a href="https://linkedin.com/in/eng-anasemad" target="_blank">
-          <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-        </a>
-
-        <a href="https://github.com/anasemadanas" target="_blank">
-          <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-        </a>
-
-        <a href="https://stackoverflow.com/users/32631412/anas-emad" target="_blank">
-          <img src="https://img.shields.io/badge/Stack%20Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white" alt="Stack Overflow">
-        </a>
-
-        <a href="https://www.facebook.com/anasemadanas1" target="_blank">
-          <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook">
-        </a>
-
-        <a href="https://anasemadanas.github.io/" target="_blank">
-          <img src="https://img.shields.io/badge/Portfolio-121013?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio">
-        </a>
-      </div>
-    </div>
-  </section>
+  <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- ========================= -->
 
   <footer>
-    © 2026 Anas Emad Al-Shawiki
+
+    © 2026 Anas Emad
     <br>
-    Built with HTML, CSS, and JavaScript
+    Built with HTML, CSS & JavaScript
+
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-  <script>
-    new Typed("#typed", {
-      strings: [
-        "Backend Developer",
-        "Java | Spring Boot | REST APIs",
-        "Django | .NET | Databases",
-        "Building Real-World Systems",
-        "Cybersecurity & AI Learner"
-      ],
-      typeSpeed: 55,
-      backSpeed: 35,
-      backDelay: 1200,
-      loop: true
-    });
-  </script>
 
 </body>
 </html>

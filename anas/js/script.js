@@ -1,4 +1,3 @@
-javascript
 new Typed("#typed", {
   strings: [
     "Backend Developer",
