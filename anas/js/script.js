@@ -1,4 +1,4 @@
-```javascript
+javascript
 new Typed("#typed", {
   strings: [
     "Backend Developer",
@@ -13,4 +13,3 @@ new Typed("#typed", {
   backDelay: 1200,
   loop: true
 });
-```
