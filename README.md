@@ -1,118 +1,211 @@
-# Anas Emad Al-Shawiki — Website
+````md
+# 🌐 Anas Emad — Portfolio Website
 
-This is my personal portfolio website built using **HTML, CSS, and JavaScript**, and hosted on **GitHub Pages**.
+Modern personal portfolio website built using **HTML, CSS, and JavaScript**, hosted with **GitHub Pages**.
 
-It showcases my skills, projects, and learning journey as a software developer.
-
----
-
-## 👨‍💻 About Me
-
-I am **Anas Emad Al-Shawiki**, a software developer passionate about building real-world applications and improving my programming skills in:
-
-* Web Development (HTML, CSS, JavaScript)
-* C++
-* C#
-* .NET Framework
-* Software Engineering Fundamentals
+This portfolio showcases my projects, technical skills, certifications, and continuous learning journey in backend development, software engineering, and cybersecurity.
 
 ---
 
 ## 🚀 Live Website
 
-Visit the portfolio here:
-👉 https://anasemadanas.github.io/
+🔗 https://anasemadanas.github.io/
 
 ---
 
-## 📌 What This Portfolio Contains
+## 👨‍💻 About Me
 
-This website includes:
+I'm **Anas Emad Al-Shawiki**, a backend-focused software developer passionate about building scalable applications, solving real-world problems, and continuously improving my engineering skills.
 
-* Personal introduction
-* Software development projects
-* C++ console applications
-* C# Windows Forms applications
-* Libraries and class-based projects
-* Future updates and improvements
-
----
-
-## 🧱 Tech Stack
-
-* HTML5
-* CSS3
-* JavaScript (Vanilla)
-* Git & GitHub
-* GitHub Pages (Hosting)
-* Minimal Mistakes Theme
-* C++
-* C#
-* .NET Framework
+### 💡 Main Interests
+- Backend Development
+- REST APIs
+- System Design
+- Databases
+- Cybersecurity
+- Cloud & DevOps
+- Software Engineering
 
 ---
 
-## 📂 Project Features
+## 🛠️ Technologies & Skills
+
+### 💻 Programming Languages
+- Java
+- C#
+- C++
+- Python
+- JavaScript
+
+### 🚀 Backend Technologies
+- Spring Boot
+- Django
+- .NET Framework
+- REST APIs
+
+### 🗄️ Databases
+- PostgreSQL
+- MySQL
+- SQL Server
+
+### ⚙️ Tools & Platforms
+- Git & GitHub
+- Docker
+- Linux
+- VMware
+- Postman
+- GitHub Pages
+
+---
+
+## 🚀 Featured Projects
+
+### 💰 Expense Tracker System
+Backend web application built using Django and PostgreSQL.
+
+#### Features
+- Authentication System
+- Dashboard & Analytics
+- Expense Tracking
+- CRUD Operations
+- REST APIs
+
+🔗 Live Demo  
+https://anasemad.pythonanywhere.com/
+
+---
+
+### 🎮 Connect 4 Game
+Interactive browser-based Connect 4 game built using HTML, CSS, and JavaScript.
+
+#### Features
+- Responsive UI
+- Interactive Gameplay
+- Game Logic Implementation
+- Browser-based Experience
+
+🔗 Play Game  
+https://anasemadanas.github.io/connect-4/
+
+---
+
+## 🎓 Certifications & Learning
+
+### 📜 Certifications
+- CS50 — Harvard University
+- AI-900 Azure AI Fundamentals
+- AWS Cloud Practitioner
+- CompTIA Security+
+- ICDL
+
+### 🔗 Learning Profiles
+- Credly  
+  https://www.credly.com/users/anas-emad-sabri-al-shawiki
+
+- ORCID  
+  https://orcid.org/0009-0000-7569-8202
+
+---
+
+## 📂 Website Features
 
 This portfolio includes:
 
-* Responsive design (mobile & desktop)
-* About section
-* Projects showcase
-* Skills section
-* Contact information
-* Clean UI/UX design
+- Responsive Design
+- Dark Modern UI
+- Projects Showcase
+- Skills Section
+- Certifications Section
+- Contact Page
+- Multi-page Navigation
+- Mobile-Friendly Layout
+- Typing Animation Effects
 
 ---
 
 ## 📁 Project Structure
 
-```
-/assets        → Images, icons, and resources
-/css           → Stylesheets
-/js            → JavaScript files
-index.html     → Main page
-README.md      → Project documentation
-```
+```text
+portfolio/
+│
+├── index.html
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+├── pages/
+│   ├── about.html
+│   ├── projects.html
+│   ├── certifications.html
+│   └── contact.html
+│
+├── assets/
+│   ├── images/
+│   └── icons/
+│
+└── README.md
+````
 
 ---
 
 ## 🎯 Purpose
 
-This project was created for:
+This project was created to:
 
-* Practicing frontend development
-* Building a professional online presence
-* Showcasing personal software projects
-* Learning GitHub Pages deployment
+* Build a professional online presence
+* Showcase personal software projects
+* Practice frontend development
+* Improve UI/UX skills
+* Learn GitHub Pages deployment
+* Demonstrate backend & software engineering skills
 
 ---
 
 ## 📬 Contact
 
-* Email: [anasemadanas1@gmail.com](mailto:anasemadanas1@gmail.com)
-* GitHub: https://github.com/anasemadanas
-* LinkedIn: [linkedin](https://www.linkedin.com/in/eng-anasemad)
+### 📧 Email
+
+[anasemadanas1@gmail.com](mailto:anasemadanas1@gmail.com)
+
+### 💻 GitHub
+
+https://github.com/anasemadanas
+
+### 🔗 LinkedIn
+
+https://www.linkedin.com/in/eng-anasemad
+
+### 🌐 Portfolio
+
+https://anasemadanas.github.io/
 
 ---
 
 ## 📄 License
 
-This project is protected under a custom View-Only License.
+This project is protected under a custom **View-Only License**.
 
-You may view and learn from the code, but you may not copy or redistribute the design without permission.
+You may view and learn from the code, but you may not copy, redistribute, or reuse the design without permission.
 
 ---
 
-## ⭐ Goal
+## ⭐ Career Goals
 
-This portfolio is part of my learning journey as a developer, aiming to improve my skills in:
+Currently focused on improving skills in:
 
-* Software engineering
-* Web development
-* System design
-* Clean architecture principles
+* Backend Engineering
+* Secure Application Development
+* Cloud Computing
+* DevOps
+* System Design
+* Clean Architecture
+* Cybersecurity
 
 ---
 
 > “Consistency is more important than talent.”
+
+```
+```
