@@ -50,7 +50,7 @@ I'm **Anas Emad Al-Shawiki**, a backend-focused software developer passionate ab
 - Python
 - JavaScript
 
-### 🚀 Backend Technologies
+### 🧰 Backend Technologies
 - Spring Boot
 - Django
 - .NET Framework
@@ -83,7 +83,8 @@ Backend web application built using Django and PostgreSQL.
 - CRUD Operations
 - REST APIs
 
-🔗 Live Demo  
+⚔️ Live Demo  
+
 https://anasemad.pythonanywhere.com/
 
 ---
