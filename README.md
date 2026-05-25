@@ -4,6 +4,16 @@ Modern personal portfolio website built using **HTML, CSS, and JavaScript**, hos
 
 This portfolio showcases my projects, technical skills, certifications, and continuous learning journey in backend development, software engineering, and cybersecurity.
 
+<p align="center">
+  <a href="https://github.com/anasemadanas">
+    <img src="https://readme-typing-svg.demolab.com?font=Montserrat&weight=600&size=26&duration=3000&pause=1200&color=0A66C2&center=true&vCenter=true&width=750&lines=Full+Stack+Developer;AI+Enthusiast;Building+Projects+With+Passion;Clean+Code+%7C+Modern+Design" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="./assets/game.gif" alt="My GitHub Game" width="100%" />
+</p>
+
 ---
 
 ## 🚀 Live Website
