@@ -1,6 +1,6 @@
 # 🌐 Anas Emad — Portfolio Website
 
-Modern personal portfolio website built using **HTML, CSS, and JavaScript**, hosted with **GitHub Pages**.
+🔗 Modern personal portfolio website built using **HTML, CSS, and JavaScript**, hosted with **GitHub Pages**.
 
 This portfolio showcases my projects, technical skills, certifications, and continuous learning journey in backend development, software engineering, and cybersecurity.
 
@@ -18,7 +18,11 @@ This portfolio showcases my projects, technical skills, certifications, and cont
 
 ## 🚀 Live Website
 
-🔗 https://anasemadanas.github.io/
+<p align="center">
+  <a href="https://anasemadanas.github.io/" target="_blank">
+    <img src="https://img.shields.io/badge/🚀%20Portfolio-Anas%20Emad-2563EB?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0F172A" />
+  </a>
+</p>
 
 ---
 
