@@ -1,4 +1,4 @@
-# 🌐 Anas Emad — Portfolio Website
+# 🌐 Anas Emad — Portfolio Website 👋
 
 🔗 Modern personal portfolio website built using **HTML, CSS, and JavaScript**, hosted with **GitHub Pages**.
 
