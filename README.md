@@ -218,6 +218,6 @@ Currently focused on improving skills in:
 
 ---
 
+```
 > “Consistency is more important than talent.”
-
 ```
