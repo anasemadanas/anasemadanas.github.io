@@ -1,224 +1,108 @@
-# 🌐 Anas Emad — Portfolio Website 👋
+# 🌐 Anas Emad Portfolio Website
 
-🔗 Modern personal portfolio website built using **HTML, CSS, and JavaScript**, hosted with **GitHub Pages**.
+Personal portfolio website for **Anas Emad**, built with plain **HTML, CSS, and JavaScript** and hosted with **GitHub Pages**.
 
-This portfolio showcases my projects, technical skills, certifications, and continuous learning journey in backend development, software engineering, and cybersecurity.
+🚀 Live site: [anasemadanas.github.io](https://anasemadanas.github.io/)
 
-<p align="center">
-  <a href="https://github.com/anasemadanas">
-    <img src="https://readme-typing-svg.demolab.com?font=Montserrat&weight=600&size=26&duration=3000&pause=1200&color=0A66C2&center=true&vCenter=true&width=750&lines=Full+Stack+Developer;AI+Enthusiast;Building+Projects+With+Passion;Clean+Code+%7C+Modern+Design" />
-  </a>
-</p>
+## 👋 About
 
-<p align="center">
-  <img src="./assets/game.gif" alt="My GitHub Game" width="100%" />
-</p>
+This portfolio presents my work as a backend-focused software developer interested in practical systems, clean APIs, databases, cybersecurity, cloud basics, and continuous learning.
 
----
+Main focus areas:
 
-## 🚀 Live Website
+- 💻 Backend development with .NET, C#, Java, Python, and Django
+- 🔗 REST APIs, authentication, dashboards, and database-backed applications
+- 🗄️ SQL Server, PostgreSQL, and MySQL
+- 🧱 System design, clean architecture, and SOLID principles
+- 🔐 Cybersecurity learning, Linux labs, Wireshark, and malware analysis basics
+- ☁️ Cloud, Docker, and DevOps fundamentals
 
-<p align="center">
-  <a href="https://anasemadanas.github.io/" target="_blank">
-    <img src="https://img.shields.io/badge/🚀%20Portfolio-Anas%20Emad-2563EB?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0F172A" />
-  </a>
-</p>
+## 🧭 Website Sections
 
----
-
-## 👨‍💻 About Me
-
-I'm **Anas Emad Al-Shawiki**, a backend-focused software developer passionate about building scalable applications, solving real-world problems, and continuously improving my engineering skills.
-
-### 💡 Main Interests
-- Backend Development
-- REST APIs
-- System Design
-- Databases
-- Cybersecurity
-- Cloud & DevOps
-- Software Engineering
-
----
-
-## 🛠️ Technologies & Skills
-
-### 💻 Programming Languages
-- Java
-- C#
-- C++
-- Python
-- JavaScript
-
-### 🧰 Backend Technologies
-- Spring Boot
-- Django
-- .NET Framework
-- REST APIs
-
-### 🗄️ Databases
-- PostgreSQL
-- MySQL
-- SQL Server
-
-### ⚙️ Tools & Platforms
-- Git & GitHub
-- Docker
-- Linux
-- VMware
-- Postman
-- GitHub Pages
-
----
+- **Home**: profile summary, focus areas, featured projects, and skills
+- **About**: background, strengths, and current learning direction
+- **Projects**: Expense Tracker, Connect 4, backend practice, and security lab work
+- **Certifications**: CS50, Credly, ORCID, Azure, AWS, and security learning links
+- **Contact**: icon-based links for email, GitHub, LinkedIn, Stack Overflow, ORCID, and WordPress
 
 ## 🚀 Featured Projects
 
 ### 💰 Expense Tracker System
-Backend web application built using Django and PostgreSQL.
 
-#### Features
-- Authentication System
-- Dashboard & Analytics
-- Expense Tracking
-- CRUD Operations
-- REST APIs
+Django web application for tracking income and expenses.
 
-⚔️ Live Demo  
+Features:
 
-https://anasemad.pythonanywhere.com/
+- Authentication
+- Dashboard views
+- Financial analytics
+- CRUD workflows
+- Backend structure prepared for REST API expansion
 
----
+Live demo: [anasemad.pythonanywhere.com](https://anasemad.pythonanywhere.com/)
 
 ### 🎮 Connect 4 Game
-Interactive browser-based Connect 4 game built using HTML, CSS, and JavaScript.
 
-#### Features
-- Responsive UI
-- Interactive Gameplay
-- Game Logic Implementation
-- Browser-based Experience
+Interactive browser game focused on game logic, turns, win detection, and UI interaction.
 
-🔗 Play Game  
-https://anasemadanas.github.io/connect-4/
+Preview asset: [assets/game.gif](assets/game.gif)
 
----
+## 🛠️ Tech Stack
 
-## 🎓 Certifications & Learning
-
-### 📜 Certifications
-- CS50 — Harvard University
-- AI-900 Azure AI Fundamentals
-- AWS Cloud Practitioner
-- CompTIA Security+
-- ICDL
-
-### 🔗 Learning Profiles
-- Credly  
-  https://www.credly.com/users/anas-emad-sabri-al-shawiki
-
-- ORCID  
-  https://orcid.org/0009-0000-7569-8202
-
----
-
-## 📂 Website Features
-
-This portfolio includes:
-
-- Responsive Design
-- Dark Modern UI
-- Projects Showcase
-- Skills Section
-- Certifications Section
-- Contact Page
-- Multi-page Navigation
-- Mobile-Friendly Layout
-- Typing Animation Effects
-
----
+- HTML5
+- CSS3
+- JavaScript
+- Typed.js
+- GitHub Pages
 
 ## 📁 Project Structure
 
 ```text
-portfolio/
-│
-├── index.html
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── script.js
-│
-├── pages/
-│   ├── about.html
-│   ├── projects.html
-│   ├── certifications.html
-│   └── contact.html
-│
-├── assets/
-│   ├── images/
-│   └── icons/
-│
-└── README.md
-````
+.
+|-- index.html
+|-- README.md
+|-- LICENSE
+|-- assets/
+|   `-- game.gif
+`-- anas/
+    |-- index.html
+    |-- css/
+    |   `-- style.css
+    |-- js/
+    |   `-- script.js
+    |-- pages/
+    |   |-- about.html
+    |   |-- projects.html
+    |   |-- certifications.html
+    |   `-- contact.html
+    `-- assets/
+        |-- icons/
+        `-- images/
+```
 
----
+## ▶️ Run Locally
 
-## 🎯 Purpose
+From the repository root:
 
-This project was created to:
+```bash
+python -m http.server 4173 --bind 127.0.0.1
+```
 
-* Build a professional online presence
-* Showcase personal software projects
-* Practice frontend development
-* Improve UI/UX skills
-* Learn GitHub Pages deployment
-* Demonstrate backend & software engineering skills
+Then open:
 
----
+```text
+http://127.0.0.1:4173/
+```
 
 ## 📬 Contact
 
-### 📧 Email
-
-[anasemadanas1@gmail.com](mailto:anasemadanas1@gmail.com)
-
-### 💻 GitHub
-
-https://github.com/anasemadanas
-
-### 🔗 LinkedIn
-
-https://www.linkedin.com/in/eng-anasemad
-
-### 🌐 Portfolio
-
-https://anasemadanas.github.io/
-
----
+- 📧 Email: [anasemadanas1@gmail.com](mailto:anasemadanas1@gmail.com)
+- 🐙 GitHub: [github.com/anasemadanas](https://github.com/anasemadanas)
+- 💼 LinkedIn: [linkedin.com/in/eng-anasemad](https://www.linkedin.com/in/eng-anasemad)
+- 🧠 Stack Overflow: [Anas Emad](https://stackoverflow.com/users/32631412/anas-emad)
+- 🟢 ORCID: [0009-0000-7569-8202](https://orcid.org/0009-0000-7569-8202)
+- 📝 WordPress: [anasemadanas.wordpress.com](https://anasemadanas.wordpress.com/)
 
 ## 📄 License
 
-This project is protected under a custom **View-Only License**.
-
-You may view and learn from the code, but you may not copy, redistribute, or reuse the design without permission.
-
----
-
-## ⭐ Career Goals
-
-Currently focused on improving skills in:
-
-* Backend Engineering
-* Secure Application Development
-* Cloud Computing
-* DevOps
-* System Design
-* Clean Architecture
-* Cybersecurity
-
----
-
-```
-> “Consistency is more important than talent.”
-```
+This repository uses a custom view-only license. You may view and learn from the code, but you may not copy, redistribute, or reuse the design without permission.

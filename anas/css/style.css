@@ -118,6 +118,14 @@ nav {
   font-size: clamp(2.4rem, 6vw, 5.2rem);
   line-height: 0.98;
   letter-spacing: 0;
+  font-weight: 760;
+}
+
+.page-hero h1 {
+  max-width: 760px;
+  font-size: clamp(2.25rem, 4.8vw, 4.25rem);
+  line-height: 1.08;
+  margin-bottom: 22px;
 }
 
 .hero-copy p,
@@ -133,6 +141,10 @@ nav {
   margin-top: 22px;
 }
 
+.page-hero p {
+  max-width: 900px;
+}
+
 .badge,
 .eyebrow {
   display: inline-flex;
@@ -142,12 +154,12 @@ nav {
   border-radius: 8px;
   background: rgba(53, 194, 209, 0.1);
   color: #9be7ef;
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0;
   margin-bottom: 20px;
   padding: 8px 11px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .typing {
@@ -192,8 +204,7 @@ nav {
 
 .profile-panel,
 .card,
-.project-card,
-.contact-card {
+.project-card {
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 8px;
   background: linear-gradient(180deg, rgba(23, 32, 51, 0.96), rgba(13, 18, 28, 0.96));
@@ -213,8 +224,7 @@ nav {
 
 .profile-panel h2,
 .card h3,
-.project-card h3,
-.contact-card h3 {
+.project-card h3 {
   font-size: 1.28rem;
   margin-bottom: 12px;
 }
@@ -284,8 +294,7 @@ nav {
 }
 
 .card,
-.project-card,
-.contact-card {
+.project-card {
   padding: 24px;
 }
 
@@ -297,8 +306,7 @@ nav {
 }
 
 .card p,
-.project-card p,
-.contact-card p {
+.project-card p {
   color: var(--muted);
   line-height: 1.7;
 }
@@ -317,8 +325,7 @@ nav {
 }
 
 .project-card a,
-.project-link,
-.contact-card a {
+.project-link {
   color: #9be7ef;
   font-weight: 800;
   margin-top: auto;
@@ -361,6 +368,73 @@ nav {
   max-width: 100%;
 }
 
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.logo-link {
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 8px;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  font-weight: 900;
+  gap: 14px;
+  justify-content: center;
+  min-height: 138px;
+  padding: 18px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.logo-link:hover,
+.logo-link:focus-visible {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: currentColor;
+  outline: none;
+  transform: translateY(-3px);
+}
+
+.logo-link svg {
+  fill: currentColor;
+  height: 42px;
+  width: 42px;
+}
+
+.logo-link span {
+  font-size: 0.98rem;
+}
+
+.logo-link.email {
+  color: #ea4335;
+}
+
+.logo-link.github {
+  color: #f7f3ea;
+}
+
+.logo-link.linkedin {
+  color: #0a66c2;
+}
+
+.logo-link.stack {
+  color: #f48024;
+}
+
+.logo-link.orcid {
+  color: #a6ce39;
+}
+
+.logo-link.wordpress {
+  color: #8cc6df;
+}
+
 footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--muted);
@@ -382,6 +456,10 @@ footer {
   .project-grid,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .hero-section {
@@ -410,5 +488,13 @@ footer {
 
   .btn {
     width: 100%;
+  }
+
+  .contact-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .logo-link {
+    min-height: 122px;
   }
 }
