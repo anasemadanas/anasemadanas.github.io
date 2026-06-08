@@ -1,14 +1,15 @@
 const typedElement = document.querySelector("#typed");
 
-if (typedElement) {
+if (typedElement && window.Typed) {
 
   new Typed("#typed", {
     strings: [
       "Backend Developer",
-      "Java | Spring Boot | REST APIs",
+      ".NET | C# | REST APIs",
       "Django | Databases | APIs",
+      "Java | Spring Boot",
       "Cybersecurity Learner",
-      "Building Real World Systems"
+      "Building Real-World Systems"
     ],
 
     typeSpeed: 55,

@@ -2,261 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anas Emad | Portfolio</title>
-
-	<link rel="stylesheet" href="css/style.css"/>
-
-	<script defer src="js/script.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anas Emad portfolio: backend developer focused on .NET, Django, Java, databases, secure systems, and cybersecurity learning." />
+  <title>Anas Emad | Backend Developer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script defer src="js/script.js"></script>
 </head>
-
 <body>
-
-  <nav>
-
+  <nav class="site-nav">
     <div class="container nav-content">
-
-      <div class="logo">
-        Anas Emad
+      <a class="logo" href="index.html">Anas Emad</a>
+      <div class="nav-links" aria-label="Main navigation">
+        <a href="pages/about.html">About</a>
+        <a href="pages/projects.html">Projects</a>
+        <a href="pages/certifications.html">Certifications</a>
+        <a href="pages/contact.html">Contact</a>
       </div>
-
-      <div class="nav-links">
-
-        <a href="pages/about.html">
-          About
-        </a>
-
-        <a href="pages/projects.html">
-          Projects
-        </a>
-
-        <a href="pages/certifications.html">
-          Certifications
-        </a>
-
-        <a href="pages/contact.html">
-          Contact
-        </a>
-
-      </div>
-
     </div>
-
   </nav>
 
-  <header>
-
-    <div class="container hero">
-
-      <!-- LEFT SIDE -->
-
-      <div class="hero-left">
-
-        <span class="badge">
-          Backend Developer • Cybersecurity Learner
-        </span>
-
-        <h1>
-          Hi, I'm
-          <span class="gradient">
-            Anas Emad
-          </span>
-        </h1>
-
-        <p>
-          Backend developer focused on Java, Spring Boot,
-          Django, REST APIs, databases,
-          scalable backend systems,
-          and secure application development.
-        </p>
-
-        <p class="typing">
-          <span id="typed"></span>
-        </p>
-
-        <div class="buttons">
-
-          <a href="pages/projects.html"
-             class="btn primary">
-
-            View Projects
-
-          </a>
-
-          <a href="mailto:anasemadanas1@gmail.com"
-             class="btn secondary">
-
-            Contact Me
-
-          </a>
-
+  <main>
+    <header class="hero-section">
+      <div class="container hero">
+        <div class="hero-copy">
+          <span class="badge">IT @ ZU / Backend Developer / Cybersecurity Learner</span>
+          <h1>Building backend systems that are useful, secure, and easy to grow.</h1>
+          <p>
+            I am Anas Emad, a software developer from Jordan focused on .NET, C#,
+            Java, Python/Django, REST APIs, databases, and practical cybersecurity.
+          </p>
+          <p class="typing"><span id="typed"></span></p>
+          <div class="buttons">
+            <a href="pages/projects.html" class="btn primary">View Projects</a>
+            <a href="mailto:anasemadanas1@gmail.com" class="btn secondary">Contact Me</a>
+          </div>
         </div>
 
+        <aside class="profile-panel" aria-label="Profile summary">
+          <img src="assets/images/DeveloperTools.png" alt="Developer tools icon" class="panel-icon" />
+          <h2>Profile Snapshot</h2>
+          <dl class="stats">
+            <div>
+              <dt>1000+</dt>
+              <dd>algorithmic problems solved</dd>
+            </div>
+            <div>
+              <dt>10</dt>
+              <dd>public GitHub repositories</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>backend, APIs, databases, secure apps</dd>
+            </div>
+          </dl>
+        </aside>
       </div>
+    </header>
 
-      <!-- RIGHT SIDE -->
-
-      <div class="hero-right">
-
-        <div class="card">
-
-          <h3>
-            🚀 Quick Info
-          </h3>
-
-          <ul>
-
-            <li>
-              💻 Java & Spring Boot
-            </li>
-
-            <li>
-              🗄️ SQL & PostgreSQL
-            </li>
-
-            <li>
-              🔐 Cybersecurity Learner
-            </li>
-
-            <li>
-              🧠 1000+ Problems Solved
-            </li>
-
-            <li>
-              ☁️ Cloud & DevOps
-            </li>
-
-          </ul>
-
+    <section class="section">
+      <div class="container section-grid">
+        <div>
+          <p class="eyebrow">What I Do</p>
+          <h2>Backend engineering with a security mindset.</h2>
         </div>
-
+        <div class="feature-grid">
+          <article class="card">
+            <span class="card-kicker">01</span>
+            <h3>APIs & Applications</h3>
+            <p>Django, .NET, Java, REST APIs, authentication, dashboards, and data-driven workflows.</p>
+          </article>
+          <article class="card">
+            <span class="card-kicker">02</span>
+            <h3>Databases</h3>
+            <p>SQL Server, PostgreSQL, MySQL, clean schema design, and reliable backend persistence.</p>
+          </article>
+          <article class="card">
+            <span class="card-kicker">03</span>
+            <h3>Security Learning</h3>
+            <p>Malware analysis basics, network security, Wireshark, Linux labs, and safer app design.</p>
+          </article>
+        </div>
       </div>
+    </section>
 
-    </div>
-
-  </header>
-
-  <!-- ========================= -->
-  <!-- ABOUT SECTION -->
-  <!-- ========================= -->
-
-  <section>
-
-    <div class="container">
-
-      <h2>
-        👤 About Me
-      </h2>
-
-      <p>
-        Passionate backend developer building secure,
-        scalable, and real-world systems using Java,
-        Spring Boot, Django, SQL databases,
-        REST APIs, and clean architecture principles.
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- ========================= -->
-  <!-- QUICK SKILLS -->
-  <!-- ========================= -->
-
-  <section>
-
-    <div class="container">
-
-      <h2>
-        ⚙️ Core Technologies
-      </h2>
-
-      <div class="skills">
-
-        <span>Java</span>
-        <span>Spring Boot</span>
-        <span>Django</span>
-        <span>REST APIs</span>
-        <span>SQL</span>
-        <span>PostgreSQL</span>
-        <span>MySQL</span>
-        <span>Git</span>
-        <span>Docker</span>
-        <span>Linux</span>
-        <span>Cybersecurity</span>
-        <span>System Design</span>
-
+    <section class="section alt-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Featured Work</p>
+          <h2>Projects worth opening first.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <h3>Expense Tracker System</h3>
+            <p>Django web app for expense management with authentication, dashboard views, analytics, and REST API direction.</p>
+            <div class="tags">
+              <span>Django</span>
+              <span>PostgreSQL</span>
+              <span>REST APIs</span>
+            </div>
+            <a href="https://anasemad.pythonanywhere.com/" target="_blank" rel="noreferrer">Open live app</a>
+          </article>
+          <article class="project-card">
+            <h3>Connect 4 Game</h3>
+            <p>Interactive game project showing logic building, user interaction, and clean implementation practice.</p>
+            <div class="tags">
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+            <a href="../assets/game.gif" target="_blank" rel="noreferrer">Preview gameplay</a>
+          </article>
+        </div>
       </div>
+    </section>
 
-    </div>
-
-  </section>
-
-  <!-- ========================= -->
-  <!-- FEATURED LINKS -->
-  <!-- ========================= -->
-
-  <section>
-
-    <div class="container">
-
-      <h2>
-        🔗 Featured Links
-      </h2>
-
-      <div class="buttons">
-
-        <a href="https://github.com/anasemadanas"
-           target="_blank"
-           class="btn secondary">
-
-          GitHub
-
-        </a>
-
-        <a href="https://www.linkedin.com/in/eng-anasemad"
-           target="_blank"
-           class="btn secondary">
-
-          LinkedIn
-
-        </a>
-
-        <a href="https://anasemadanas.github.io/"
-           target="_blank"
-           class="btn secondary">
-
-          Portfolio
-
-        </a>
-
-        <a href="https://www.credly.com/users/anas-emad-sabri-al-shawiki"
-           target="_blank"
-           class="btn secondary">
-
-          Credly
-
-        </a>
-
+    <section class="section">
+      <div class="container section-grid">
+        <div>
+          <p class="eyebrow">Stack</p>
+          <h2>Tools I use and keep improving.</h2>
+        </div>
+        <div class="skills">
+          <span>C#</span>
+          <span>.NET</span>
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>Python</span>
+          <span>Django</span>
+          <span>JavaScript</span>
+          <span>REST APIs</span>
+          <span>SQL Server</span>
+          <span>PostgreSQL</span>
+          <span>MySQL</span>
+          <span>Git</span>
+          <span>Docker</span>
+          <span>Linux</span>
+          <span>Wireshark</span>
+          <span>System Design</span>
+        </div>
       </div>
-
-    </div>
-
-  </section>
-
-  <!-- ========================= -->
-  <!-- FOOTER -->
-  <!-- ========================= -->
+    </section>
+  </main>
 
   <footer>
-
-    © 2026 Anas Emad
-    <br>
-    Built with HTML, CSS & JavaScript
-
+    <div class="container footer-content">
+      <span>Copyright 2026 Anas Emad</span>
+      <span>Built with HTML, CSS, and JavaScript</span>
+    </div>
   </footer>
-
 </body>
 </html>
