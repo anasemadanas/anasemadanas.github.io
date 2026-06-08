@@ -4,6 +4,17 @@ Personal portfolio website for **Anas Emad**, built with plain **HTML, CSS, and 
 
 🚀 Live site: [anasemadanas.github.io](https://anasemadanas.github.io/)
 
+## 📌 Quick Navigation
+
+- [👋 About](#-about)
+- [🧭 Website Sections](#-website-sections)
+- [🚀 Featured Projects](#-featured-projects)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [📁 Project Structure](#-project-structure)
+- [▶️ Run Locally](#️-run-locally)
+- [📬 Contact](#-contact)
+- [📄 License](#-license)
+
 ## 👋 About
 
 This portfolio presents my work as a backend-focused software developer interested in practical systems, clean APIs, databases, cybersecurity, cloud basics, and continuous learning.
