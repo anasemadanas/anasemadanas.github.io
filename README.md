@@ -32,7 +32,7 @@ Main focus areas:
 
 - **Home**: profile summary, focus areas, featured projects, and skills
 - **About**: background, strengths, and current learning direction
-- **Projects**: Expense Tracker, Connect 4, backend practice, and security lab work
+- **Projects**: Expense Tracker, backend practice, UI previews, and security lab work
 - **Certifications**: CS50, Credly, ORCID, Azure, AWS, and security learning links
 - **Contact**: icon-based links for email, GitHub, LinkedIn, Stack Overflow, ORCID, and WordPress
 
@@ -52,9 +52,9 @@ Features:
 
 Live demo: [anasemad.pythonanywhere.com](https://anasemad.pythonanywhere.com/)
 
-### 🎮 Connect 4 Game
+### Connect 4 UI Preview
 
-Interactive browser game focused on game logic, turns, win detection, and UI interaction.
+Design-only preview asset for a Connect 4 interface. It shows the visual direction and intended interaction flow, but it is not a separate Connect 4 game repository.
 
 Preview asset: [assets/game.gif](assets/game.gif)
 
