@@ -29,6 +29,7 @@ body {
     linear-gradient(135deg, #080a0f 0%, #111017 46%, #07120d 100%);
   color: var(--text);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -40,8 +41,7 @@ a {
   margin: 0 auto;
 }
 
-.site-nav,
-nav {
+.site-nav {
   position: sticky;
   top: 0;
   z-index: 10;
@@ -119,6 +119,7 @@ nav {
   line-height: 0.98;
   letter-spacing: 0;
   font-weight: 760;
+  overflow-wrap: anywhere;
 }
 
 .page-hero h1 {
@@ -134,6 +135,7 @@ nav {
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.8;
+  overflow-wrap: anywhere;
 }
 
 .hero-copy > p {
@@ -324,13 +326,36 @@ nav {
   flex-direction: column;
 }
 
-.project-card a,
+.project-card > a,
 .project-link {
   color: #9be7ef;
   font-weight: 800;
   margin-top: auto;
   padding-top: 22px;
   text-decoration: none;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.project-actions a {
+  border: 1px solid rgba(53, 194, 209, 0.35);
+  border-radius: 8px;
+  color: #9be7ef;
+  font-weight: 800;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+
+.project-actions a:hover,
+.project-actions a:focus-visible {
+  background: rgba(53, 194, 209, 0.1);
+  outline: none;
 }
 
 .tags,
@@ -365,7 +390,44 @@ nav {
 
 .certs img,
 .contact img {
+  height: auto;
   max-width: 100%;
+}
+
+.certs a {
+  display: inline-flex;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.cert-layout {
+  display: grid;
+  gap: 28px;
+}
+
+.cert-section {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 26px;
+}
+
+.cert-section h2 {
+  font-size: clamp(1.45rem, 3vw, 2.25rem);
+}
+
+.cert-section .certs {
+  margin-top: 18px;
+}
+
+.courses-archive {
+  align-items: center;
+  display: flex;
+  gap: 22px;
+  justify-content: space-between;
+}
+
+.courses-archive p {
+  max-width: 720px;
+  margin-top: 10px;
 }
 
 .contact-links {
@@ -448,6 +510,25 @@ footer {
   gap: 12px;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--text);
+  outline: none;
+}
+
 @media (max-width: 860px) {
   .hero,
   .section-grid,
@@ -475,11 +556,21 @@ footer {
   .nav-links {
     justify-content: flex-start;
   }
+
+  .courses-archive,
+  .footer-content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 520px) {
   .container {
-    width: min(100% - 28px, 1120px);
+    width: min(1120px, calc(100% - 28px));
   }
 
   .nav-links a {
@@ -488,6 +579,22 @@ footer {
 
   .btn {
     width: 100%;
+  }
+
+  .hero-copy h1,
+  .page-hero h1 {
+    font-size: 1.75rem;
+    line-height: 1.12;
+  }
+
+  .certs {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .section h2,
+  .page-hero h2 {
+    font-size: 1.75rem;
   }
 
   .contact-links {
