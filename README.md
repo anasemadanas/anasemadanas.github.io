@@ -2,6 +2,8 @@
 
 Personal portfolio website for **Anas Emad**, built with plain **HTML, CSS, and JavaScript** and hosted with **GitHub Pages**.
 
+<a id="top"></a>
+
 🚀 Live site: [anasemadanas.github.io](https://anasemadanas.github.io/)
 
 ## 📌 Quick Navigation
@@ -62,8 +64,9 @@ Source code: [github.com/anasemadanas/connect-4](https://github.com/anasemadanas
 
 --- 
 
-<img src="assets/game.gif" width="700">
-
+<a href="#top">
+  <img src="assets/game.gif" width="800">
+</a>
 
 ## 🛠️ Tech Stack
 
