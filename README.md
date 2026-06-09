@@ -60,6 +60,8 @@ Live demo: [anasemadanas.github.io/connect-4](https://anasemadanas.github.io/con
 
 Source code: [github.com/anasemadanas/connect-4](https://github.com/anasemadanas/connect-4)
 
+Preview GIF only: [assets/game.gif](assets/game.gif)
+
 ## 🛠️ Tech Stack
 
 - HTML5
@@ -75,8 +77,6 @@ Source code: [github.com/anasemadanas/connect-4](https://github.com/anasemadanas
 |-- index.html
 |-- README.md
 |-- LICENSE
-|-- assets/
-|   `-- game.gif
 `-- anas/
     |-- index.html
     |-- css/
