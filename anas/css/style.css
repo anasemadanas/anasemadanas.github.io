@@ -20,6 +20,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 84px;
 }
 
 body {
@@ -30,6 +31,35 @@ body {
   color: var(--text);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   overflow-x: hidden;
+}
+
+/* Ambient texture and lighting adapted from the reference portfolio. */
+body::before,
+body::after {
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+}
+
+body > nav,
+body > main,
+body > footer {
+  position: relative;
+  z-index: 1;
+}
+
+body::before {
+  background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 78%);
+  opacity: .28;
+}
+
+body::after {
+  background: radial-gradient(circle at 78% 15%, rgba(100,210,123,.07), transparent 24rem), radial-gradient(circle at 18% 54%, rgba(53,194,209,.055), transparent 26rem);
+  animation: ambient-light 22s ease-in-out infinite alternate;
 }
 
 a {
@@ -46,8 +76,9 @@ a {
   top: 0;
   z-index: 10;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(8, 10, 15, 0.86);
-  backdrop-filter: blur(18px);
+  background: rgba(8, 10, 15, 0.76);
+  backdrop-filter: blur(22px) saturate(1.25);
+  -webkit-backdrop-filter: blur(22px) saturate(1.25);
 }
 
 .nav-content {
@@ -91,6 +122,7 @@ a {
   font-weight: 700;
   padding: 10px 12px;
   text-decoration: none;
+  transition: color 180ms ease, background 180ms ease, transform 180ms ease;
 }
 
 .nav-links a:hover,
@@ -98,10 +130,24 @@ a {
   background: rgba(255, 255, 255, 0.07);
   color: var(--text);
   outline: none;
+  transform: translateY(-1px);
 }
 
 .hero-section {
   padding: 88px 0 72px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  background: radial-gradient(ellipse at 74% 42%, rgba(53,194,209,.12), transparent 38%), radial-gradient(ellipse at 18% 8%, rgba(100,210,123,.08), transparent 32%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  animation: ambient-light 16s ease-in-out infinite alternate;
 }
 
 .hero {
@@ -186,11 +232,12 @@ a {
   min-height: 46px;
   padding: 0 18px;
   text-decoration: none;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+  transition: transform 220ms cubic-bezier(.2,.8,.2,1), border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.22);
 }
 
 .primary {
@@ -208,9 +255,20 @@ a {
 .card,
 .project-card {
   border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 8px;
-  background: linear-gradient(180deg, rgba(23, 32, 51, 0.96), rgba(13, 18, 28, 0.96));
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(25, 36, 54, 0.82), rgba(13, 18, 28, 0.88));
   box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 260ms cubic-bezier(.2,.8,.2,1), border-color 260ms ease, box-shadow 260ms ease;
+}
+
+.card:hover,
+.project-card:hover,
+.profile-panel:hover {
+  border-color: rgba(53,194,209,.32);
+  box-shadow: 0 28px 70px rgba(0,0,0,.4), 0 0 34px rgba(53,194,209,.07);
+  transform: translateY(-5px);
 }
 
 .profile-panel {
@@ -441,7 +499,7 @@ a {
   aspect-ratio: 1 / 1;
   background: rgba(255, 255, 255, 0.055);
   border: 1px solid rgba(255, 255, 255, 0.11);
-  border-radius: 8px;
+  border-radius: 14px;
   color: var(--text);
   display: flex;
   flex-direction: column;
@@ -452,7 +510,7 @@ a {
   padding: 18px;
   text-align: center;
   text-decoration: none;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+  transition: transform 240ms cubic-bezier(.2,.8,.2,1), border-color 240ms ease, background 240ms ease, box-shadow 240ms ease;
 }
 
 .logo-link:hover,
@@ -461,6 +519,7 @@ a {
   border-color: currentColor;
   outline: none;
   transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.22);
 }
 
 .logo-link svg {
@@ -501,6 +560,23 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--muted);
   padding: 28px 0;
+}
+
+/* Scroll reveal is applied by the shared script only when supported. */
+.js-motion .reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 650ms ease var(--reveal-delay, 0ms), transform 650ms cubic-bezier(.2,.75,.25,1) var(--reveal-delay, 0ms);
+}
+
+.js-motion .reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes ambient-light {
+  from { transform: translate3d(-1%, -1%, 0) scale(1); }
+  to { transform: translate3d(1%, 1%, 0) scale(1.05); }
 }
 
 .footer-content {
@@ -604,4 +680,15 @@ footer {
   .logo-link {
     min-height: 122px;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+  .js-motion .reveal-on-scroll { opacity: 1; transform: none; }
 }
