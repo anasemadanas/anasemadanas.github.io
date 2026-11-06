@@ -692,3 +692,101 @@ footer {
   }
   .js-motion .reveal-on-scroll { opacity: 1; transform: none; }
 }
+
+/* Shared theme tokens and accessible controls. */
+:root {
+  color-scheme: dark;
+  --bg: #0b1220;
+  --surface: #121d2d;
+  --surface-2: #1a2a3f;
+  --text: #eef4fb;
+  --muted: #b2c0d0;
+  --line: #34465c;
+  --cyan: #53c7d5;
+  --green: #70d69a;
+  --amber: #f4c16d;
+  --shadow: 0 24px 70px rgba(0, 0, 0, .3);
+  --page-gradient: radial-gradient(circle at top left, rgba(83,199,213,.13), transparent 28rem), linear-gradient(135deg, #0b1220 0%, #121a29 54%, #101d1c 100%);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --surface-2: #eaf1f7;
+  --text: #172638;
+  --muted: #526579;
+  --line: #cbd7e3;
+  --cyan: #087f91;
+  --green: #18794e;
+  --amber: #95600b;
+  --shadow: 0 20px 55px rgba(29, 56, 83, .11);
+  --page-gradient: radial-gradient(circle at 8% 0%, rgba(8,127,145,.10), transparent 30rem), linear-gradient(135deg, #f4f7fb, #edf4f5 58%, #f7f5ef);
+}
+
+body { background: var(--page-gradient); color: var(--text); transition: background-color 220ms ease, color 220ms ease; }
+.site-nav { background: color-mix(in srgb, var(--bg) 88%, transparent); border-color: color-mix(in srgb, var(--line) 65%, transparent); }
+.profile-panel, .card, .project-card { background: linear-gradient(145deg, color-mix(in srgb, var(--surface-2) 90%, transparent), color-mix(in srgb, var(--surface) 96%, transparent)); border-color: color-mix(in srgb, var(--line) 75%, transparent); }
+.alt-section { background: color-mix(in srgb, var(--surface-2) 55%, transparent); border-color: color-mix(in srgb, var(--line) 65%, transparent); }
+.tags span, .skills span, .logo-link { background: color-mix(in srgb, var(--surface-2) 72%, transparent); border-color: var(--line); }
+.secondary { background: color-mix(in srgb, var(--surface) 75%, transparent); border-color: var(--line); }
+.project-actions a, .project-card > a, .project-link { color: var(--cyan); }
+.badge, .eyebrow { color: var(--cyan); border-color: color-mix(in srgb, var(--cyan) 42%, transparent); background: color-mix(in srgb, var(--cyan) 11%, transparent); }
+.typing { color: var(--green) !important; }
+
+.theme-toggle {
+  align-items: center; display: inline-flex; justify-content: center; gap: 8px;
+  flex: 0 0 auto; min-height: 44px; padding: 0 13px; border: 1px solid var(--line);
+  border-radius: 999px; background: var(--surface); color: var(--text); font: inherit;
+  font-size: .9rem; font-weight: 750; cursor: pointer; transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+.theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.theme-toggle:hover { transform: translateY(-1px); border-color: var(--cyan); }
+.theme-toggle:focus-visible, .section-dot:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+
+.section-dots {
+  position: fixed; z-index: 20; inset-inline-end: max(18px, env(safe-area-inset-right)); top: 50%;
+  display: flex; flex-direction: column; align-items: center; gap: 12px; transform: translateY(-50%);
+  padding: 12px 9px; border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); border-radius: 999px;
+  background: color-mix(in srgb, var(--surface) 82%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.section-dot { position: relative; display: block; width: 14px; height: 14px; border: 2px solid var(--muted); border-radius: 50%; background: var(--surface); transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease; }
+.section-dot:hover { transform: scale(1.25); border-color: var(--cyan); }
+.section-dot.is-active { transform: scale(1.22); border-color: var(--cyan); background: var(--cyan); box-shadow: 0 0 0 4px color-mix(in srgb, var(--cyan) 20%, transparent); }
+@media (hover: hover) and (pointer: fine) {
+  .section-dot::after { content: attr(title); position: absolute; right: calc(100% + 12px); top: 50%; transform: translate(4px, -50%); opacity: 0; pointer-events: none; white-space: nowrap; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); font-size: .82rem; font-weight: 700; box-shadow: var(--shadow); transition: opacity 160ms ease, transform 160ms ease; }
+  .section-dot:hover::after, .section-dot:focus-visible::after { opacity: 1; transform: translate(0, -50%); }
+}
+[id] { scroll-margin-top: 88px; }
+
+@media (max-width: 860px) {
+  .nav-content { align-items: center; flex-direction: row; flex-wrap: wrap; }
+  .nav-links { order: 3; width: 100%; overflow-x: auto; flex-wrap: nowrap; justify-content: flex-start; scrollbar-width: thin; }
+  .nav-links a { white-space: nowrap; }
+  .theme-toggle { margin-inline-start: auto; }
+}
+@media (max-width: 600px) {
+  .section-dots { inset-inline-end: max(12px, env(safe-area-inset-right)); top: auto; bottom: max(16px, env(safe-area-inset-bottom)); transform: none; flex-direction: row; gap: 11px; padding: 10px 12px; }
+  .section-dot { width: 13px; height: 13px; }
+  .hero-section { padding: 42px 0 52px; }
+  .section, .page-hero { padding-block: 52px; }
+  .hero-copy h1, .page-hero h1 { font-size: clamp(2rem, 9vw, 3rem); }
+  .hero-copy p, .page-hero p, .section p { font-size: 1rem; }
+  .buttons { gap: 10px; }
+  .btn { min-height: 48px; }
+}
+@media (max-width: 360px) {
+  .container { width: calc(100% - 24px); }
+  .section-dots { gap: 8px; }
+  .section-dot { width: 12px; height: 12px; }
+  .theme-toggle { min-height: 42px; padding-inline: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body { transition: none; }
+}
+:root[data-theme="light"] body::before {
+  background-image: linear-gradient(rgba(23,38,56,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(23,38,56,.035) 1px, transparent 1px);
+  opacity: .5;
+}
+:root[data-theme="light"] body::after { background: radial-gradient(circle at 78% 15%, rgba(24,121,78,.045), transparent 24rem), radial-gradient(circle at 18% 54%, rgba(8,127,145,.035), transparent 26rem); }
+:root[data-theme="light"] .logo-link.github { color: #172638; }
